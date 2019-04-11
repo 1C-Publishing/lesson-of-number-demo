@@ -23,16 +23,16 @@
 		var screenY = window.innerHeight;
 		if (screenX/screenY < koef)
 		{
-		  screenX = 100;
-		  screenY = ((screenX/koef) / screenY) * 100;
+		  screenX = screenX;
+		  screenY = screenX/koef;
 		}
 		else
 		{
 		  screenY = screenY;
-		  screenX = ((screenY*koef)/screenX) * 100;
+		  screenX = screenY*koef;
 		}
-		obj.style.width = screenX + "%";
-		obj.style.height = screenY + "%";
+		obj.style.width = screenX + "px";
+		obj.style.height = screenY + "px";
 	  </script>
     </div>
   </body>
