@@ -1,6 +1,6 @@
 {
-"companyName": "DefaultCompany",
-"productName": "LessonOfNumber",
+"companyName": "1C",
+"productName": "LessonOfNumberWindowed",
 "dataUrl": "LessonNumberWeb.data.unityweb",
 "wasmCodeUrl": "LessonNumberWeb.wasm.code.unityweb",
 "wasmFrameworkUrl": "LessonNumberWeb.wasm.framework.unityweb",
