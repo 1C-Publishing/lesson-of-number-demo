@@ -21,25 +21,29 @@
     <div class="webgl-content">
 	  <div id="gameContainer" ></div>
 	  <script>
-		var dElement = document.documentElement;
-		var obj = document.getElementById('gameContainer');
-		var koef = 1.4545;
-		var screenX = window.innerWidth;
-		var screenY = window.innerHeight;
-		if (screenX/screenY < koef)
-		{
-		  screenX = screenX;
-		  screenY = screenX/koef;
+	    var resize_function = function() {
+			var dElement = document.documentElement;
+			var obj = document.getElementById('gameContainer');
+			var koef = 1.4545;
+			var screenX = window.innerWidth;
+			var screenY = window.innerHeight;
+			if (screenX/screenY < koef)
+			{
+			  screenX = screenX;
+			  screenY = screenX/koef;
+			}
+			else
+			{
+			  screenY = screenY;
+			  screenX = screenY*koef;
+			}
+			
+			obj.style.width = screenX + "px";
+			obj.style.height = screenY + "px";
+			console.log("Size " + screenX + " " + screenY);
 		}
-		else
-		{
-		  screenY = screenY;
-		  screenX = screenY*koef;
-		}
-		
-		obj.style.width = screenX + "px";
-		obj.style.height = screenY + "px";
-		console.log("Size " + screenX + " " + screenY);
+		resize_function();
+		window.addEventListener('resize', resize_function, true);
 	  </script>
     </div>
   </body>
