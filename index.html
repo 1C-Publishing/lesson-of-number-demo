@@ -36,8 +36,12 @@
 			
 			obj.style.width = screenX + "px";
 			obj.style.height = screenY + "px";
-			canvas.width = screenX + "px";
-			canvas.height = screenY + "px";
+			if (canvas.GetContext)
+			{
+				var ctx = canvas.GetContext('2d');
+				ctx.width = screenX;
+				ctx.height = screenY;
+			}
 		}
 		
 		resize_function();
