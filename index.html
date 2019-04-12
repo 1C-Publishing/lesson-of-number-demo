@@ -34,10 +34,14 @@
 			  screenX = screenY*koef;
 			}
 			
-			if (canvas)
+			obj.style.width = screenX + "px";
+			obj.style.height = screenY + "px";
+			if (canvas && canvas.getContext)
 			{
 				canvas.width = screenX;
 				canvas.height = screenY;
+				console.log("screenX: ", screenX);
+				console.log("screenY: ", screenY);
 			}
 		}
 		
