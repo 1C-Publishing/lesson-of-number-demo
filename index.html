@@ -36,8 +36,10 @@
 			
 			obj.style.width = screenX + "px";
 			obj.style.height = screenY + "px";
-			if (canvas.getContext)
+			if (canvas && canvas.getContext)
 			{
+				console.log("screenX: ", screenX);
+				console.log("screenY: ", screenY);
 				var ctx = canvas.getContext('2d');
 				ctx.width = screenX;
 				ctx.height = screenY;
