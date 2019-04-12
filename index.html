@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Урок Цифры</title>
 	<style type="text/css">
-      #gameContainer { width: 2048px; height: 1409px; }
+      #gameContainer { width: 100%; height: 100%; }
       #gameContainer canvas { position: absolute; }
       #gameContainer:after { padding-top: 56.25%; display: block; content: ''; }
     </style>
@@ -20,8 +20,7 @@
   <body>
     <div class="webgl-content">
 	  <div id="gameContainer" ></div>
-	  <!--div id="gameContainer" style="width: 2048px; height: 1409px"></div-->
-	  <!--script>
+	  <script>
 		var dElement = document.documentElement;
 		var obj = document.getElementById('gameContainer');
 		var koef = 1.4545;
@@ -40,7 +39,7 @@
 		
 		obj.style.width = screenX + "px";
 		obj.style.height = screenY + "px";
-	  </script-->
+	  </script>
     </div>
   </body>
 </html>
