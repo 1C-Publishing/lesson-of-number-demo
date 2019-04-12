@@ -36,9 +36,9 @@
 			
 			obj.style.width = screenX + "px";
 			obj.style.height = screenY + "px";
-			if (canvas.GetContext)
+			if (canvas.getContext)
 			{
-				var ctx = canvas.GetContext('2d');
+				var ctx = canvas.getContext('2d');
 				ctx.width = screenX;
 				ctx.height = screenY;
 			}
