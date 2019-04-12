@@ -19,7 +19,7 @@
 		var resize_function = function() {
 			var dElement = document.documentElement;
 			var obj = document.getElementById('gameContainer');
-			var canvas = document.getElementById('#canvas');
+			var cvs = document.getElementById('#canvas');
 			var koef = 1.4545;
 			var screenX = window.innerWidth;
 			var screenY = window.innerHeight;
@@ -36,11 +36,11 @@
 			
 			obj.style.width = screenX + "px";
 			obj.style.height = screenY + "px";
-			if (typeof canvas != 'undefined' && canvas && canvas.getContext)
+			if (typeof cvs != 'undefined' && cvs && cvs.getContext)
 			{
-				canvas.width = screenY;
-				canvas.height = screenY;
-				var ctx = canvas.getContext('2d');
+				cvs.width = screenY;
+				cvs.height = screenY;
+				var ctx = cvs.getContext('2d');
 				if (ctx)
 				{
 					ctx.rect(0, 0, screenX, screenY);
