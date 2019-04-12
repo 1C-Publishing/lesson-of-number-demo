@@ -16,42 +16,21 @@
     <div class="webgl-content">
 	  <div id="gameContainer" style="width: 2048px; height: 1409px"></div>
 	  <script>
-		var resize_function = function() {
-			var dElement = document.documentElement;
-			var obj = document.getElementById('gameContainer');
-			var cvs = document.getElementById('#canvas');
-			var koef = 1.4545;
-			var screenX = window.innerWidth;
-			var screenY = window.innerHeight;
-			if (screenX/screenY < koef)
-			{
-			  screenX = screenX;
-			  screenY = screenX/koef;
-			}
-			else
-			{
-			  screenY = screenY;
-			  screenX = screenY*koef;
-			}
-			
-			obj.style.width = screenX + "px";
-			obj.style.height = screenY + "px";
-			if (typeof cvs != 'undefined' && cvs && cvs.getContext)
-			{
-				cvs.width = screenY;
-				cvs.height = screenY;
-				var ctx = cvs.getContext('webgl');
-				if (ctx)
-				{
-					ctx.rect(0, 0, screenX, screenY);
-					ctx.fill();
-				}
-				cvs = null;
-			}
+		var dElement = document.documentElement;
+		var obj = document.getElementById('gameContainer');
+		var koef = 1.4545;
+		var screenX = window.innerWidth;
+		var screenY = window.innerHeight;
+		if (screenX/screenY < koef)
+		{
+		  screenX = screenX;
+		  screenY = screenX/koef;
 		}
-		
-		resize_function();
-		window.addEventListener('resize', resize_function, true);
+		else
+		{
+		  screenY = screenY;
+		  screenX = screenY*koef;
+		}
 	  </script>
     </div>
   </body>
